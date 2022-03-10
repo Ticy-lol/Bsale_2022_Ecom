@@ -32,7 +32,8 @@ El deploy del frontend se hizo en netlify con la siguiente URL:
 - https://62295b26d9a497499bb4a297--stoic-swirles-650a13.netlify.app/
 
 Bugs:
--Se intento distribuir las funciones en distintos archivos js pero generaba problemas al momento de compilado, entonces solo se dejo en un mismo archivo.
+
+- Se intento distribuir las funciones en distintos archivos js pero generaba problemas al momento de compilado, entonces solo se dejo en un mismo archivo.
 
 #Backend:
 
@@ -41,14 +42,16 @@ Bugs:
 - Url de la API: https://boiling-journey-27147.herokuapp.com/api/v1
 
 Se usaron principalmente dos librerias:
--Sequelize, se uso para hacer la coneccion con la base de datos y los llamados para pedir la informacion a la base de datos.
--@hapi/boom, se utilizo para el manejo de los errores en las distintas instancias del proyecto ya sea en las peticiones a la base de datos u otros.
+
+- Sequelize, se uso para hacer la coneccion con la base de datos y los llamados para pedir la informacion a la base de datos.
+- @hapi/boom, se utilizo para el manejo de los errores en las distintas instancias del proyecto ya sea en las peticiones a la base de datos u otros.
 
 El backend principalmente esta divido cuatro carpetas routes,services, middlewares y libs:
--libs:Contiene el archivo con la conexion a la base de datos usando sequelize.
--middlewares: Estos archivos son los encargados de atrapar todos los errores y/o validar ciertos datos de las peticiones.
--services: Estos archivos son los que manejan la logica de las peticiones hacia la base de datos.
--routes: Estos archivos archivos son los que se encargar de leer las rutas de las peticiones y derivarlos a su correspondiente funcion(carpeta services) para obtener la informacion solicitada.
+
+- libs:Contiene el archivo con la conexion a la base de datos usando sequelize.
+- middlewares: Estos archivos son los encargados de atrapar todos los errores y/o validar ciertos datos de las peticiones.
+- services: Estos archivos son los que manejan la logica de las peticiones hacia la base de datos.
+- routes: Estos archivos archivos son los que se encargar de leer las rutas de las peticiones y derivarlos a su correspondiente funcion(carpeta services) para obtener la informacion solicitada.
 
 El deploy de la API se hizo en heroku.
 
