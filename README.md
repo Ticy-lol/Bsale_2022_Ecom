@@ -51,9 +51,10 @@ El backend principalmente esta divido cuatro carpetas routes,services, middlewar
 El deploy de la API se hizo en heroku.
 
 Guia de peticiones a la API:
--Todos los productos: https://boiling-journey-27147.herokuapp.com/api/v1/products
--Todos los productos de una categoria: https://boiling-journey-27147.herokuapp.com/api/v1/products/category/1
--Producto filtrado por un id: https://boiling-journey-27147.herokuapp.com/api/v1/products/50
--Productos que en su nombre hagan coincidencias con el dato: https://boiling-journey-27147.herokuapp.com/api/v1/products?data=pisco
--Todos las categorias: https://boiling-journey-27147.herokuapp.com/api/v1/categories
--Categoria filtrado por un id: https://boiling-journey-27147.herokuapp.com/api/v1/categories/5
+
+- Todos los productos: https://boiling-journey-27147.herokuapp.com/api/v1/products
+- Todos los productos de una categoria: https://boiling-journey-27147.herokuapp.com/api/v1/products/category/1
+- Producto filtrado por un id: https://boiling-journey-27147.herokuapp.com/api/v1/products/50
+- Productos que en su nombre hagan coincidencias con el dato: https://boiling-journey-27147.herokuapp.com/api/v1/products?data=pisco
+- Todos las categorias: https://boiling-journey-27147.herokuapp.com/api/v1/categories
+- Categoria filtrado por un id: https://boiling-journey-27147.herokuapp.com/api/v1/categories/5
