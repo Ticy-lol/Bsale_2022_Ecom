@@ -20,8 +20,9 @@ En el proyecto en GIT se encuentra el backend y el frontend divido cada uno en s
 - https://62295b26d9a497499bb4a297--stoic-swirles-650a13.netlify.app/
 
 #Frontend:
--Lenguaje: Javascript
--Componentes: Boostrap
+
+- Lenguaje: Javascript
+- Componentes: Boostrap
 
 Se utilizo JS vanilla para la creacion, Boostrap para los componentes y CSS para modificar ciertas cosas de los componentes de boostrap. No se utilizo ningun manejo de rutas ya que no era necesario para el caso.
 Se aplico el uso de los eventos en los distintos botones en el HTML para hacer las peticiones a la API y mostrar los datos en la pantalla.
@@ -34,9 +35,10 @@ Bugs:
 -Se intento distribuir las funciones en distintos archivos js pero generaba problemas al momento de compilado, entonces solo se dejo en un mismo archivo.
 
 #Backend:
--Lenguaje: Nodejs
--Framertork: Express
--Url de la API: https://boiling-journey-27147.herokuapp.com/api/v1
+
+- Lenguaje: Nodejs
+- Framertork: Express
+- Url de la API: https://boiling-journey-27147.herokuapp.com/api/v1
 
 Se usaron principalmente dos librerias:
 -Sequelize, se uso para hacer la coneccion con la base de datos y los llamados para pedir la informacion a la base de datos.
