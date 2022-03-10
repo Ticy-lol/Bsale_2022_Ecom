@@ -14,10 +14,24 @@ específicos, tales como; boopstrap, material, Jquery, entre otros.
 
 #Importante:
 El codigo se encuentra documentado en ingles.
+En el proyecto en GIT se encuentra el backend y el frontend divido cada uno en su respectiva carpeta. El deploy del Backend se hizo en heroku y el frontend en netlify, en las siguientes URLS:
+
+- https://boiling-journey-27147.herokuapp.com/api/v1/products
+- https://62295b26d9a497499bb4a297--stoic-swirles-650a13.netlify.app/
 
 #Frontend:
 -Lenguaje: Javascript
 -Componentes: Boostrap
+
+Se utilizo JS vanilla para la creacion, Boostrap para los componentes y CSS para modificar ciertas cosas de los componentes de boostrap. No se utilizo ningun manejo de rutas ya que no era necesario para el caso.
+Se aplico el uso de los eventos en los distintos botones en el HTML para hacer las peticiones a la API y mostrar los datos en la pantalla.
+
+El deploy del frontend se hizo en netlifi con la siguiente URL:
+
+- https://62295b26d9a497499bb4a297--stoic-swirles-650a13.netlify.app/
+
+Bugs:
+-Se intento distribuir las funciones en distintos archivos js pero generaba problemas al momento de compilado, entonces solo se dejo en un mismo archivo.
 
 #Backend:
 -Lenguaje: Nodejs
