@@ -17,7 +17,7 @@ El codigo se encuentra documentado en ingles.
 En el proyecto en GIT se encuentra el backend y el frontend divido cada uno en su respectiva carpeta. El deploy del Backend se hizo en heroku y el frontend en netlify, en las siguientes URLS:
 
 - https://boiling-journey-27147.herokuapp.com/api/v1/products
-- https://62295b26d9a497499bb4a297--stoic-swirles-650a13.netlify.app/
+- https://stoic-swirles-650a13.netlify.app/
 
 #Frontend:
 
@@ -29,7 +29,7 @@ Se aplico el uso de los eventos en los distintos botones en el HTML para hacer l
 
 El deploy del frontend se hizo en netlify con la siguiente URL:
 
-- https://62295b26d9a497499bb4a297--stoic-swirles-650a13.netlify.app/
+- https://stoic-swirles-650a13.netlify.app/
 
 Bugs:
 

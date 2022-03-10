@@ -31,8 +31,8 @@ const getData = async () => {
     const productsData = await fetchAPI(productsAPI);
     const categoriesData = await fetchAPI(categoriesAPI);
     //Print in the DOM body all products and categories in the page
-    printProductCards(productsData);
-    printCategoriesCards(categoriesData);
+    await printProductCards(productsData);
+    await printCategoriesCards(categoriesData);
   } catch (error) {
     console.error(error);
   }
@@ -143,22 +143,35 @@ const printProductCards = (data) => {
 };
 //LISTENER EVENTS
 //Listener for first load
-document.addEventListener('DOMContentLoaded', async () => {
-  getData();
-});
+(async function charge() {
+  await getData();
+})();
 //Listener if user click in any category
-filters.addEventListener('click', (e) => {
+filters.addEventListener('click', async (e) => {
   if (e.target.classList.contains('category')) {
-    printFilteredProductsByCategory(e);
+    await printFilteredProductsByCategory(e);
   }
 });
 //Listener if user click on Buscar button
-searchButton.addEventListener('click', (e) => {
+searchButton.addEventListener('click', async (e) => {
   const data = inputField.value;
   if (data == '') {
   } else {
-    searchProducts(data);
+    await searchProducts(data);
     //Clear the input field
     inputField.value = '';
+  }
+});
+//Listener if user pess enter instead of the search button
+inputField.addEventListener('keyup', async function (event) {
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.keyCode === 13) {
+    const data = inputField.value;
+    if (data == '') {
+    } else {
+      await searchProducts(data);
+      //Clear the input field
+      inputField.value = '';
+    }
   }
 });

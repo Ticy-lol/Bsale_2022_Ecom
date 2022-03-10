@@ -63,23 +63,28 @@ var getData = function getData() {
 
         case 8:
           categoriesData = _context2.sent;
-          //Print in the DOM body all products and categories in the page
-          printProductCards(productsData);
-          printCategoriesCards(categoriesData);
-          _context2.next = 16;
-          break;
+          _context2.next = 11;
+          return regeneratorRuntime.awrap(printProductCards(productsData));
+
+        case 11:
+          _context2.next = 13;
+          return regeneratorRuntime.awrap(printCategoriesCards(categoriesData));
 
         case 13:
-          _context2.prev = 13;
+          _context2.next = 18;
+          break;
+
+        case 15:
+          _context2.prev = 15;
           _context2.t0 = _context2["catch"](2);
           console.error(_context2.t0);
 
-        case 16:
+        case 18:
         case "end":
           return _context2.stop();
       }
     }
-  }, null, null, [[2, 13]]);
+  }, null, null, [[2, 15]]);
 }; //Search the the product match with the data given by user
 
 
@@ -228,33 +233,109 @@ var printProductCards = function printProductCards(data) {
 //Listener for first load
 
 
-document.addEventListener('DOMContentLoaded', function _callee() {
-  return regeneratorRuntime.async(function _callee$(_context5) {
+(function charge() {
+  return regeneratorRuntime.async(function charge$(_context5) {
     while (1) {
       switch (_context5.prev = _context5.next) {
         case 0:
-          getData();
+          _context5.next = 2;
+          return regeneratorRuntime.awrap(getData());
 
-        case 1:
+        case 2:
         case "end":
           return _context5.stop();
       }
     }
   });
-}); //Listener if user click in any category
+})(); //Listener if user click in any category
 
-filters.addEventListener('click', function (e) {
-  if (e.target.classList.contains('category')) {
-    printFilteredProductsByCategory(e);
-  }
+
+filters.addEventListener('click', function _callee(e) {
+  return regeneratorRuntime.async(function _callee$(_context6) {
+    while (1) {
+      switch (_context6.prev = _context6.next) {
+        case 0:
+          if (!e.target.classList.contains('category')) {
+            _context6.next = 3;
+            break;
+          }
+
+          _context6.next = 3;
+          return regeneratorRuntime.awrap(printFilteredProductsByCategory(e));
+
+        case 3:
+        case "end":
+          return _context6.stop();
+      }
+    }
+  });
 }); //Listener if user click on Buscar button
 
-searchButton.addEventListener('click', function (e) {
-  var data = inputField.value;
+searchButton.addEventListener('click', function _callee2(e) {
+  var data;
+  return regeneratorRuntime.async(function _callee2$(_context7) {
+    while (1) {
+      switch (_context7.prev = _context7.next) {
+        case 0:
+          data = inputField.value;
 
-  if (data == '') {} else {
-    searchProducts(data); //Clear the input field
+          if (!(data == '')) {
+            _context7.next = 4;
+            break;
+          }
 
-    inputField.value = '';
-  }
+          _context7.next = 7;
+          break;
+
+        case 4:
+          _context7.next = 6;
+          return regeneratorRuntime.awrap(searchProducts(data));
+
+        case 6:
+          //Clear the input field
+          inputField.value = '';
+
+        case 7:
+        case "end":
+          return _context7.stop();
+      }
+    }
+  });
+}); //Listener if user pess enter instead of the search button
+
+inputField.addEventListener('keyup', function _callee3(event) {
+  var data;
+  return regeneratorRuntime.async(function _callee3$(_context8) {
+    while (1) {
+      switch (_context8.prev = _context8.next) {
+        case 0:
+          if (!(event.keyCode === 13)) {
+            _context8.next = 8;
+            break;
+          }
+
+          data = inputField.value;
+
+          if (!(data == '')) {
+            _context8.next = 5;
+            break;
+          }
+
+          _context8.next = 8;
+          break;
+
+        case 5:
+          _context8.next = 7;
+          return regeneratorRuntime.awrap(searchProducts(data));
+
+        case 7:
+          //Clear the input field
+          inputField.value = '';
+
+        case 8:
+        case "end":
+          return _context8.stop();
+      }
+    }
+  });
 });
