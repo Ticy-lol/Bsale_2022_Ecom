@@ -27,7 +27,7 @@ En el proyecto en GIT se encuentra el backend y el frontend divido cada uno en s
 Se utilizo JS vanilla para la creacion, Boostrap para los componentes y CSS para modificar ciertas cosas de los componentes de boostrap. No se utilizo ningun manejo de rutas ya que no era necesario para el caso.
 Se aplico el uso de los eventos en los distintos botones en el HTML para hacer las peticiones a la API y mostrar los datos en la pantalla.
 
-El deploy del frontend se hizo en netlifi con la siguiente URL:
+El deploy del frontend se hizo en netlify con la siguiente URL:
 
 - https://62295b26d9a497499bb4a297--stoic-swirles-650a13.netlify.app/
 
