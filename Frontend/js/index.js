@@ -74,8 +74,6 @@ const printCategoriesCards = (data) => {
   filtersTemplateCard.querySelector('a').dataset.id = -1;
   let clone = filtersTemplateCard.cloneNode(true);
   fragment.appendChild(clone);
-  clone = filtersTemplateCard.cloneNode(true);
-  fragment.appendChild(clone);
   //Submit all clones templates before in the DOM
   filters.appendChild(fragment);
 };
@@ -87,7 +85,6 @@ const printFilteredProductsByCategory = async (e) => {
     el.innerHTML = '';
     //Get data from the element
     const id = e.target.parentElement.querySelector('a').dataset.id;
-    category = id;
     let categoriesAPI = '';
     //Set the API url
     if (id == -1) {

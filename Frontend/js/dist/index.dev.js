@@ -139,8 +139,6 @@ var printCategoriesCards = function printCategoriesCards(data) {
   filtersTemplateCard.querySelector('a').textContent = 'todos';
   filtersTemplateCard.querySelector('a').dataset.id = -1;
   var clone = filtersTemplateCard.cloneNode(true);
-  fragment.appendChild(clone);
-  clone = filtersTemplateCard.cloneNode(true);
   fragment.appendChild(clone); //Submit all clones templates before in the DOM
 
   filters.appendChild(fragment);
@@ -159,7 +157,6 @@ var printFilteredProductsByCategory = function printFilteredProductsByCategory(e
           el.innerHTML = ''; //Get data from the element
 
           id = e.target.parentElement.querySelector('a').dataset.id;
-          category = id;
           categoriesAPI = ''; //Set the API url
 
           if (id == -1) {
@@ -169,27 +166,27 @@ var printFilteredProductsByCategory = function printFilteredProductsByCategory(e
           } //Get all products matches
 
 
-          _context4.next = 9;
+          _context4.next = 8;
           return regeneratorRuntime.awrap(fetchAPI(categoriesAPI));
 
-        case 9:
+        case 8:
           categoriesData = _context4.sent;
           //Print all products
           printProductCards(categoriesData);
-          _context4.next = 16;
+          _context4.next = 15;
           break;
 
-        case 13:
-          _context4.prev = 13;
+        case 12:
+          _context4.prev = 12;
           _context4.t0 = _context4["catch"](0);
           console.error(_context4.t0);
 
-        case 16:
+        case 15:
         case "end":
           return _context4.stop();
       }
     }
-  }, null, null, [[0, 13]]);
+  }, null, null, [[0, 12]]);
 }; //Print all products given
 
 
@@ -227,9 +224,6 @@ var printProductCards = function printProductCards(data) {
   }); //Print all the cloned templates pushed before
 
   items.appendChild(fragment);
-  /*  console.log(
-    document.getElementsByClassName('product-card')[0].querySelector('img').src
-  ); */
 }; //LISTENER EVENTS
 //Listener for first load
 
